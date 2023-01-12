@@ -1,13 +1,373 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --clr-primary-400: #000000;
+  --clr-grey-100: #f9f9f9;
+  --clr-grey-200: #737373;
+  --clr-grey-400: #252B42;
+  --clr-grey-500: #18191F;
+  --clr-grey-600: #161616;
+  --clr-neutral-100: #ffffff;
+  --clr-accent-200: #23A6F0;
+  --clr-accent-400: #f4511e;
+
+  --ff-primary: "Inter", sans-serif;
+  --ff-secondary: "DM sans", sans-serif;
+
+  /* --fs-50: 10px;14 16 18 21.5 h624 h526 h428 h336 h240 h152  */
+  --fs-50: 14px;
+  --fs-100: 16px;
+  --fs-200: 18px;
+  --fs-300: 21.5px;
+  --fs-400: 24px;
+  --fs-500: 26px;
+  --fs-600: 28px;
+  --fs-700: 36px;
+  --fs-800: 40px;
+  --fs-900: 52px;
+
+  --fs-body: var(--fs-100);
+  --fs-primary-heading: var(--fs-900);
+  --fs-secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-200);
+  --fs-button: var(--fs-200);
+  --fs-form-button: var(--fs-300);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
+  --size-200: 1rem;
+  --size-275: 18px;
+  --size-300: 20px;
+  --size-400: 25px;
+  --size-450: 30px;
+  --size-490: 37px;
+  --size-500: 47px;
+  --size-600: 50px;
+  --size-700: 60px;
+  --size-750: 64px;
+  --size-800: 75px;
+  --size-900: 80px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 50em) {
+  :root {
+    --fs-primary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-400);
+    --fs-button: var(--fs-100);
+    --fs-form-button: var(--fs-200);
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Preset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* General styling */
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-400);
+  background: linear-gradient(200.44deg, 
+  rgba(0, 0, 0, 0.0001) 16.41%, 
+  rgba(0, 0, 0, 0.51) 77.16%),
+  url(./assets/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: var(--fs-900);
+  max-width: 18ch;
+}
+
+h2 {
+  font-size: var(--fs-800);
+}
+
+h3 {
+  font-size: var(--fs-700);
+}
+
+h4 {
+  font-size: var(--fs-600);
+}
+
+h5 {
+  font-size: var(--fs-500);
+}
+
+h6 {
+  font-size: var(--fs-400);
+}
+
+p {
+  max-width: 30ch;
+}
+
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 0;
+  border-radius: 0.8125rem;
+  padding: 1.375em 2em;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-button);
+  line-height: 1;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-400);
+}
+
+.submit-btn {
+  padding: 1.375rem 10rem;
+  border-radius: 0.5625rem;
+  font-size: var(--fs-form-button);
+}
+
+.play-btn {
+  padding: 2.175rem 2.3rem;
+  border-radius: 73.6px;
+}
+
+.btn:hover,
+.button:focus-visible {
+  background: rgba(244, 81, 30, 0.07);
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* Utility classes */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+.container {
+  --max-width: 1440px;
+  --padding: 0.5rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+:where(.flow > :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3em);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
+.ff-secondary {
+  font-family: var(--ff-secondary);
+}
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.text-grey-200 {
+  color: var(--clr-grey-200);
+}
+
+.text-grey-400 {
+  color: var(--clr-grey-400);
+}
+
+.text-grey-500 {
+  color: var(--clr-grey-500);
+}
+
+.text-grey-600 {
+  color: var(--clr-grey-600);
+}
+
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-accent-200 {
+  background-color: var(--clr-accent-200);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-extra-bold {
+  font-weight: var(--fw-extra-bold);
+}
+
+.fs-50 {
+  font-size: var(--fs-50);
+}
+
+.fs-100 {
+  font-size: var(--fs-100);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.display-lg-none {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .display-sm-none {
+    display: none;
+  }
+}
+
+/* Nav */
+.primary-heading {
+  width: 100%;
+}
+
+.top-nav {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: flex-end; 
+  gap: 20%;
+  justify-content: flex-start;
+}
+
+.primary-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2.625rem;
+}
+
+.primary-nav ul li a {
+  padding: 1.75rem 1.25rem;
+  /* display: inline-block; */
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-nav);
+  transition: 1s linear left;
+  position: relative;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.logo {
+  max-width: none;
 }
