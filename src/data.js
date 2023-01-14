@@ -256,6 +256,26 @@ const properties = [
         price: 1200
     },
     {
+        id: "p17",
+        image: "https://images.unsplash.com/photo-1600047508006-16c1f3111ef8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        address: "2578 Folsom street, san francisco, CA, 94110",
+        bedroom: 4,
+        shower: 2,
+        size: 2,
+        type: "private room",
+        price: 1200
+    },
+    {
+        id: "p18",
+        image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        address: "2578 Folsom street, san francisco, CA, 94110",
+        bedroom: 4,
+        shower: 2,
+        size: 2,
+        type: "private room",
+        price: 1200
+    },
+    {
         id: "p18",
         image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         address: "2578 Folsom street, san francisco, CA, 94110",

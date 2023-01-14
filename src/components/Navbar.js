@@ -7,30 +7,24 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <header className="primary-header container">
-      <div className="top-nav">
-        <button
-          type="button"
-          className="hamburger display-lg-none"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-          onClick={() => setIsSidebarOpen(true)}
-        >
-        <AiOutlineMenu/>
-        </button>
-        <img className="logo" src={logo} alt="logo" />
+    <header className="primary-header">
+      <div className="top-nav container">
+        <a href="/">
+          <img className="logo" src={logo} alt="logo" />
+        </a>
         <div className={isSidebarOpen ? "nav-wrapper sidebar-open" : "nav-wrapper"}>
           <div className="nav-header flex display-lg-none">
-            <img className="logo" src={logo} alt="logo" />
+            <a href="">
+              <img className="logo" src={logo} alt="logo" />
+            </a>
             <button
               type="button"
-              className="close-btn"
               aria-controls="close"
               aria-expanded="false"
               onClick={() => setIsSidebarOpen(false)}
             >
-              <AiOutlineClose/>
-              </button>
+              <AiOutlineClose />
+            </button>
           </div>
           <nav className="primary-nav">
             <ul role="list">
@@ -42,8 +36,16 @@ const Navbar = () => {
               })}
             </ul>
           </nav>
-          <button className="customer-care-btn display-lg-none"></button>
         </div>
+        <button
+          type="button"
+          className="display-lg-none"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          onClick={() => setIsSidebarOpen(true)}
+        >
+          <AiOutlineMenu />
+        </button>
       </div>
     </header>
   )
