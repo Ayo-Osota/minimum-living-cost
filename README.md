@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# MINIMUM LIVING COST
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The most affortable place to stay in the san franciso bay area.
 
-## Available Scripts
+## [Technologies Used]()
+<p>
+<img src ="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src ="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+</p>
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+You need it? We got it. We make finding your next home easy, comfortable, and simple. From our happiness guarantee to our selective roommate finder option. We provide you the flexibility that you most desire.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To view a live example, [click here](https://minimum-leaving-cost.netlify.app/).
 
-### `npm test`
+### Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* ex. Windows 10
 
-### `npm run build`
+### Installing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You'll need `Git` and `Node.js` (which comes with npm) installed on your computer.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+node@v10.16.0 or higher
+npm@6.9.0 or higher
+git@2.17.1 or higher
+```
 
-### `npm run eject`
+1. Clone the repo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/Ayo-Osota/minimum-leaving-cost.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.Starting the Client application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd minimum-leaving-cost
+# install all packages
+npm install
+# start the server
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`This will start client app on localhost:3000`
 
-## Learn More
+### Executing program
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Use the map form to find a property in your neighbourhood
+* Check lists of available properties
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+Not 
+```
+command to run if program contains helper info
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+Contributors names and contact info
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ex. Ayomikun Osota  
+ex. [@Ayo_Osota](https://twitter.com/Ayo_Osota)
 
-### Making a Progressive Web App
+## Version History
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+January twitter coding challenge #coding360challenge orgainised by 
+* [Ossy](https://twitter.com/codingossy)
+Figma Design
+* [Design](https://www.figma.com/file/iCtEmCtz2EECa7GFPwcbuB/Home-Rentals-Agency-website-design-Community?fuid=1119230491366355678)
