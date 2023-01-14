@@ -1,6 +1,6 @@
 const FeaturesSection = () => {
     return (
-        <section className="even-columns">
+        <section className="features-section even-columns">
             <div>
                 <div>
                     <h6>
