@@ -1,47 +1,50 @@
-import { Link } from "react-router-dom";
-import { links } from "../utils.js/data";
-import emailIcon from "../assets/artsy-icons/email-icon.svg";
-import locationIcon from "../assets/artsy-icons/location-icon.png";
+import logo from "../assets/logo.png";
+import { contacts, socialMedia } from "../data";
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="flex container">
-                <h2 className="text-grey-400 ff-secondary fs-secondary-heading fw-semi-bold display-sm-none"
-                >
-                    ARTSY.
-                </h2>
-                <nav className="footer-nav">
-                    <h6 className="text-grey-300 ff-poppins fs-75 display-lg-none">
-                        REACH US
-                    </h6>
-                    <ul role="list">
-                        {links.map((link) => {
-                            const { id, text, url } = link;
+        <footer className="footer container">
+            <section className="container">
+            <div className="even-columns">
+                <a href="/" className="display-sm-none">
+                    <h1 className="text-primary-400">Logo</h1>
+                    <img className="logo" src={logo} alt="logo" />
+                </a>
+                <div>
+                    <article>
+                        {contacts.map((contact) => {
+                            const { id, icon, text } = contact;
                             return (
-                                <li key={id}><Link to={url}>{text}</Link></li>
+                                <a key={id} href="/">
+                                    {icon} <p>{text}</p>
+                                </a>
                             )
                         })}
-                        <li><a href="#">Blog</a></li>
-                        <li><Link to="#">Wallets</Link></li>
-                        <li><Link to="#">Rates</Link></li>
-                        <li><Link to="#">High bids</Link></li>
-                        <li>
-                            <a href="mailto: artsystudios@gmail.com">
-                                <img src={emailIcon} alt="email" />
-                                <span>artsystudios@gmail.com</span> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src={locationIcon} alt="location" />
-                                Lagos, Nigeria.
-                            </a>
-                        </li>
+                    </article>
+                    <article className="flex">
+                        <p>Social Media</p>
+                        {socialMedia.map((socialmedium) => {
+                            const { id, icon, link } = socialmedium;
+                            return (
+                                <a key={id} href={link}>{icon}</a>
+                            )
+                        })}
+                    </article>
+                </div>
+            </div>
+            <div className="even-columns">
+                <nav className="display-sm-none">
+                    <ul className="flex" role="list">
+                        <li><a href="/">about us</a></li>
+                        <li><a href="/">conatct us</a></li>
+                        <li><a href="/">help</a></li>
+                        <li><a href="/">privacy policy</a></li>
+                        <li><a href="/">disclaimer</a></li>
                     </ul>
                 </nav>
+                <p>Copyright © {new Date().getFullYear()} Minimumlivingcost. All Rights Reserved.</p>
             </div>
-            <p className="text-center fs-200 display-sm-none">Artsystudios © {new Date().getFullYear()}. All Rights Reserved.</p>
+            </section>
         </footer>
 
     )
