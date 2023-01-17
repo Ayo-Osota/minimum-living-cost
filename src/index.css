@@ -41,7 +41,7 @@
 
 @media (max-width: 50em) {
   :root {
-    --fs-primary-heading: var(--fs-800);
+    --fs-primary-heading: var(--fs-700);
     --fs-secondary-heading: var(--fs-400);
     --fs-button: var(--fs-100);
     --fs-form-button: var(--fs-200);
@@ -50,6 +50,8 @@
     --fs-form-button: var(--fs-200);
     --fs-700: var(--fs-300);
     --fs-500: var(--fs-200);
+    --fs-400: var(--fs-200);
+    --fs-300: var(--fs-200);
   }
 }
 
@@ -541,6 +543,14 @@ p {
     margin-top: 2.5rem;
     grid-template-columns: auto;
   }
+
+  .map-form {
+    padding: 0.5rem 0.575rem;
+  }
+
+  .map-form .form-control {
+    padding: 1rem 0.4375rem;
+  }
 }
 
 /* About Section */
@@ -964,7 +974,7 @@ p {
 
 @media (max-width: 50em) {
   .property-form {
-    padding: 2.8125rem 1.9375rem 3.25rem;
+    padding: 2.8125rem 0.5rem 3.25rem;
     grid-auto-flow: column;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(11, auto);
@@ -1129,6 +1139,7 @@ p {
 
 @media (max-width: 50em) {
   .footer {
+    --fs-50: 10px;
     margin-top: 5rem;
     padding-top: 3rem;
     padding-bottom: 2.5rem;
