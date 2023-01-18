@@ -999,7 +999,7 @@ p {
 
   .submit-btn {
     padding: 1.375rem 1rem;
-    width: 100%;
+    max-width: 90vw;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1013,7 +1013,7 @@ p {
   .property-form .form-control input,
   .property-form .form-control textarea,
   .property-form .form-control select {
-    max-width: 100%;
+    max-width: 90vw;
   }
 }
 
