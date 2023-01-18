@@ -41,7 +41,7 @@
 
 @media (max-width: 50em) {
   :root {
-    --fs-primary-heading: var(--fs-700);
+    --fs-primary-heading: var(--fs-800);
     --fs-secondary-heading: var(--fs-400);
     --fs-button: var(--fs-100);
     --fs-form-button: var(--fs-200);
@@ -638,7 +638,7 @@ p {
   }
 
   .about {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -647,7 +647,7 @@ p {
   background: #f5f5f5;
 }
 
-.property-section > .container {
+.property-section>.container {
   --max-width: 1140px;
   padding-top: 3.75rem;
   padding-bottom: 5rem;
@@ -699,7 +699,7 @@ p {
   --flow-spacer: 0.1875rem;
 }
 
-.property-info > h6 {
+.property-info>h6 {
   max-width: 24ch;
 }
 
@@ -711,7 +711,7 @@ p {
   justify-content: space-around;
 }
 
-.property footer > div {
+.property footer>div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -720,7 +720,7 @@ p {
   justify-content: center;
 }
 
-.property footer > div:not(:last-child) {
+.property footer>div:not(:last-child) {
   border-right: 1px solid var(--clr-grey-300);
 }
 
@@ -774,6 +774,16 @@ p {
   .property-img {
     width: 100%;
   }
+
+  .pagination-btn__container button:first-child,
+  .pagination-btn__container button:last-child {
+    padding: 0.5625rem;
+    border: none;
+  }
+
+  .pagination-btn__container button:not(:first-child, :last-child) {
+    padding: 0.5625rem 1rem;
+  }
 }
 
 .features-section {
@@ -797,11 +807,11 @@ p {
   gap: 20px;
 }
 
-.features > div:first-child {
+.features>div:first-child {
   align-items: flex-end;
 }
 
-.features > div > article {
+.features>div>article {
   background: rgba(0, 0, 0, 0.2);
   background-position: center;
   background-size: cover;
@@ -809,7 +819,7 @@ p {
   border-radius: 20px;
 }
 
-.features > div > article > h6 {
+.features>div>article>h6 {
   color: var(--clr-neutral-100);
   max-width: 13ch;
   text-align: center;
@@ -818,25 +828,25 @@ p {
   margin-top: 1.875rem;
 }
 
-.features > div:first-child > article:nth-child(1) {
+.features>div:first-child>article:nth-child(1) {
   background-image: url(https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80);
   width: 250px;
   height: 334px;
 }
 
-.features > div:first-child > article:nth-child(2) {
+.features>div:first-child>article:nth-child(2) {
   background-image: url(https://www.ipma.world/assets/bruce-mars-AndE50aaHn4-unsplash.jpg);
   width: 270px;
   height: 270px;
 }
 
-.features > div:last-child > article:nth-child(1) {
+.features>div:last-child>article:nth-child(1) {
   background-image: url(https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
   width: 212px;
   height: 285px;
 }
 
-.features > div:last-child article:nth-child(2) {
+.features>div:last-child article:nth-child(2) {
   background-image: url(https://images.unsplash.com/photo-1633113214698-485cdb2f56fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
   width: 338px;
   height: 356px;
@@ -859,7 +869,7 @@ p {
   }
 
   .features div,
-  .features > div:first-child {
+  .features>div:first-child {
     flex-direction: column;
     align-items: center;
   }
@@ -899,7 +909,7 @@ p {
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-200);
   line-height: 24px;
-  letter-spacing: 0.2px; 
+  letter-spacing: 0.2px;
   color: var(--clr-grey-400);
 }
 
@@ -933,7 +943,7 @@ p {
   justify-content: center;
 }
 
-.drop-zone h6, 
+.drop-zone h6,
 .drop-zone p,
 .drop-zone label {
   text-transform: none;
@@ -975,6 +985,7 @@ p {
 @media (max-width: 50em) {
   .property-form {
     padding: 2.8125rem 0.5rem 3.25rem;
+    max-width: 100%;
     grid-auto-flow: column;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(11, auto);
@@ -993,9 +1004,20 @@ p {
     display: flex;
     justify-content: center;
   }
+
+  .property-form .form-control select {
+    padding: 0.75rem 1.125rem;
+    border-right: none;
+  }
+
+  .property-form .form-control input,
+  .property-form .form-control textarea,
+  .property-form .form-control select {
+    max-width: 100%;
+  }
 }
 
-.input-images > img {
+.input-images>img {
   width: 50px;
 }
 
@@ -1005,7 +1027,8 @@ p {
   padding-left: 0.5rem;
   padding-bottom: 4.875rem;
   padding-top: 8.125rem;
-  background-color: rgba(244, 81, 30, 0.07);;
+  background-color: rgba(244, 81, 30, 0.07);
+  align-items: center;
 }
 
 .testimony-wrapper {
@@ -1013,7 +1036,7 @@ p {
   margin-left: 9vw;
 }
 
-.testimony > p {
+.testimony>p {
   max-width: 47ch;
   font-size: var(--fs-300);
   color: var(--clr-grey-500);
@@ -1023,6 +1046,9 @@ p {
   width: 61px;
   height: 61px;
   background: var(--clr-grey-200);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 2px solid #F4511E;
   border-radius: 100vw;
 }
@@ -1035,16 +1061,16 @@ p {
 }
 
 .testimony::before {
-  content: "a";
-  font-size: var(--fs-900);
+  content: url(./assets/double-quote.png);
+  font-size: 10rem;
   color: var(--clr-accent-400);
   opacity: 0.3;
   position: absolute;
-  top: -32px;
+  top: -150px;
   left: -49px;
 }
 
-.testimony-wrapper > div:last-child {
+.testimony-wrapper>div:last-child {
   margin-top: 4.6875rem;
   display: flex;
   gap: 0.75rem;
@@ -1061,6 +1087,23 @@ p {
 
 .carousel-btn__active {
   background: var(--clr-accent-400);
+}
+
+.testimony-section iframe {
+  width: 100%;
+  height: 590px;
+}
+
+@media (max-width: 50em) {
+  .testimony-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 2.5rem;
+  }
+
+  .testimony-section iframe {
+    height: 315px;
+  }
 }
 
 /* Footer */
@@ -1086,14 +1129,14 @@ p {
   justify-content: center;
 }
 
-.footer .even-columns div > article:first-child {
+.footer .even-columns div>article:first-child {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: flex-start;
   gap: 22px;
 }
 
-.footer .even-columns div > article:first-child a {
+.footer .even-columns div>article:first-child a {
   display: flex;
   flex-direction: row;
   gap: 22px;
@@ -1104,16 +1147,16 @@ p {
   color: var(--clr-grey-500);
 }
 
-.footer .even-columns div > article a svg {
+.footer .even-columns div>article a svg {
   font-size: var(--fs-400);
   color: var(--clr-accent-400);
 }
 
-.footer .even-columns div > article:first-child a:first-child {
+.footer .even-columns div>article:first-child a:first-child {
   grid-column: 1 / 3;
 }
 
-.footer .even-columns div > article:last-child {
+.footer .even-columns div>article:last-child {
   margin-top: 2.875rem;
 }
 

@@ -88,3 +88,5 @@ January twitter coding challenge #coding360challenge orgainised by
 * [Ossy](https://twitter.com/codingossy)
 Figma Design
 * [Design](https://www.figma.com/file/iCtEmCtz2EECa7GFPwcbuB/Home-Rentals-Agency-website-design-Community?fuid=1119230491366355678)
+* [Temporary_youtube_video_by_Enes_Yilmazer](https://youtu.be/U8Cd_McCdow)
+* [Testimonies_from_MRLODGE](https://www.mrlodge.com/information-for-tenants/tenantfeedback)

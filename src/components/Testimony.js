@@ -3,7 +3,7 @@ const Testimony = ({feedback, name, designation, pfp}) => {
         <article className="testimony">
             <p>{feedback}</p>
             <footer>
-                <div className="pfp" style={{backgroundImage: pfp}}></div>
+                <div className="pfp" style={{backgroundImage: `url(${pfp}`}}></div>
                 <div className="info">
                     <p>{name}</p>
                     <p>{designation}</p>

@@ -15,7 +15,7 @@ const TestimonySection = () => {
             1 + index < 0 ? setIndex(testimonials.length - 1) :
                 1 + index > testimonials.length - 1 ? setIndex(0) :
                     setIndex(1 + index)
-        }, 3000);
+        }, 5000);
         return () => {
             clearInterval(autoSlide);
         };
@@ -39,7 +39,14 @@ const TestimonySection = () => {
                     })}
                 </div>
             </div>
-            <video src="/"></video>
+            <iframe
+                src="https://www.youtube.com/embed/U8Cd_McCdow"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            >
+            </iframe>
         </section>
     )
 }
